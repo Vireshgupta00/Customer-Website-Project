@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+p:hover, a:hover, h1:hover, h2:hover{font-size:150%; color:yellow; background-color:red;}
+div.para1 {
+	float: right;
+	margin-top: 0px;
+	maring-right: 200px;
+}
+
+div.para2 {
+	float: right;
+	margin-top: 30px;
+margin-right: 500px;
+}
+
+div.para3 {
+	float: center;
+margin-right: 200px;
+}
+
+div.container {
+	height: 100%;
+	width: 100%;
+	border: 1px solid gray;
+}
+
+header {
+	padding: 1em;
+	color: White;
+	background-color: black;
+	text-align: center;
+margin-right: 0px;
+}
+
+footer {
+	padding: 1em;
+	color: White;
+	background-color: Black;
+	text-align: center;
+margin-right: 0px;
+}
+
+nav {
+	float: left;
+	max-width: 160px;
+	margin-top: 0px;
+	padding: 5px;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 10px;
+}
+
+nav ul a {
+	text-decoration: none;
+}
+
+article {
+	margin-left: 150px;
+	border-left: 1px solid Black;
+	padding: 20px;
+	overflow: hidden;
+}
+
+.sidenav1 {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 17px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.sidenav1 a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav1 a:hover {
+    color: #f1f1f1;
+}
+</style>
+<script language="javascript">
+                function divideNumbers()
+                {
+                        var a = 622;
+                        var b = parseInt(document.getElementById("value2").value);
+                        var ansD = document.getElementById("answer");
+                        ansD.value = 622/b;
+                }
+        </script>
+</head>
+
+
+<body>
+	
+
+
+
+<header>
+<div class="para2" align="right"> 
+
+				<form action="http://www.google.com/search" class="searchform"
+					method="get" name="searchform" target="_blank">
+					<input name="sitesearch" type="hidden" value=""> <input
+						autocomplete="on" class="form-controls search" name="q"
+						placeholder="Search" required="required"
+						type="text">
+					<button class="button" type="submit">Search</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+					href="about.html"> <input type="button" name="About"
+					value="About Us">
+				</a> &nbsp; 
+                    <a
+					href="contact.html"> <input type="button" name="Contact us"
+					value="Contact">
+				</form>
+
+
+				</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			</div>
+
+			<div class="para3">
+<img src="oil.png" height="100" width="100" align="middle" border="4">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+<font size="40" color="blue">Oil & Gas Sites</font>
+			</div>
+
+
+		</header>
+
+
+
+		<nav>
+
+			<ul>
+
+				<font size="5">
+
+					<li><a href="customer website.html"> <b>HOME</b>
+					</a></li>
+
+					<hr color="black" width="100%" height="1px">
+
+					<li><a href="Mathura.html"> Mathura </a></li>
+					<li><a href="Bina.html">Bina</a></li>
+                                        <li><a href="Barauni.html">Barauni</a></li>
+					<li><a href="calculator.html">Calculator</a></li>
+				</font>
+
+			</ul>
+
+		</nav>
+
+<div class="sidenav1"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+&nbsp;&nbsp;  KEEP IN TOUCH WITH &nbsp;&nbsp;DEVELOPER
+<br>
+<br> 
+
+
+<a href="https://www.instagram.com/the_highdude/" ><img src="insta.jpeg" width="30%" height="30%" onmouseover="this.src='ins.gif'" onmouseout="this.src='insta.jpeg'"></a>
+<a href="mailto:vireshgupta206@gmail.com"><img src="images.png" height="30%" width="30%" onmouseover="this.src='mail.gif'" onmouseout="this.src='images.png'"></a>
+<a href="tel: +919817896857"><img src="download.png" height="30%" width="30%" onmouseover="this.src='ph.gif'" onmouseout="this.src='download.png'"></a>
+</div>
+
+		<article>
+
+			<div class="para1">
+				
+			</div>
+
+			<font size="20" Color="black" face="Cambria"> <u>About Us </u>
+			</font> <br> We have some new robot technology that can check oil and
+			gas pipes for damage and decay from the inside. We've been testing
+			this technology for a while, and it looks feasible. <br>The robots crawl
+			inside the pipes.
+			<ol>
+				<li>The user is presented with a map of Two main offices and
+					The Headquaters of oil/gas sites within India.
+
+					
+
+						<li>The map allows the user to show a street view map with
+							country borders.
+						<li>The map allows the user to zoom in and out.
+						
+			</ol>
+
+			<hr color="GREEN">
+
+			<font color="black" size="15"><u> Headquaters in India </u></font> <br><br>
+<b>Headquaters are in Mathura</b>
+			<br>
+			<div id="googleMap" style="width: 100%; height: 80px;"></div>
+
+<div id="map" style="width: 85%; height: 500px"></div>
+
+			<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(27.485154, 77.658957); 
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    icon: "oil.png"
+  });
+  var infoWindowOptions = {
+    content: '<a href="Mathura.html">Headquaters Mathura</a>'
+};   
+  var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
+google.maps.event.addListener(marker,'mouseover',function(e){
+  
+  infoWindow.open(map, marker);
+  
+});
+
+  marker.setMap(map);
+}
+</script>
+			<script
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsoiP3jgf2wiOoxLNaBLVYJ8xGEa2-290&callback=myMap"></script>
+
+			<p id="demo"></p>
+
+		</article>
+
+
+
+		<footer align="center">
+
+			Copyright &copy; Oil & Gas Sites <br> Viresh Gupta &nbsp; 2019
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                               <a
+					href="about.html"> <input type="button" name="About"
+					value="About Us">
+				</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a
+					href="contact.html"> <input type="button" name="Contact us"
+					value="Contact">
+				</a>      
+
+		</footer>
+
+
+
+	</div>
+
+
+	<script>
+	function myFunction() {
+    	var x = document.getElementById("mySearch").placeholder;
+    	document.getElementById("demo").innerHTML = x;
+	}
+	</script>
+
+</div>
+</body>
+</html>

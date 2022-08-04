@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+#right-panel 
+       {
+
+        font-family: 'Roboto','sans-serif';
+
+        line-height: 30px;
+
+        padding-left: 10px;
+
+      }
+
+ 
+
+      #right-panel select, #right-panel input {
+
+        font-size: 15px;
+
+      }
+
+ 
+
+      #right-panel select {
+
+        width: 100%;
+
+      }
+
+ 
+
+      #right-panel i {
+
+        font-size: 12px;
+
+      }
+
+      html, body {
+
+        height: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+      }
+
+      #map {
+
+        height: 100%;
+
+        float: left;
+
+        width: 100%;
+
+        height: 100%;
+
+      }
+
+      #right-panel {
+
+        margin: 20px;
+
+        border-width: 2px;
+
+        width: 20%;
+
+        height: 400px;
+
+        float: left;
+
+        text-align: left;
+
+        padding-top: 0;
+
+      }
+
+      #directions-panel {
+
+        margin-top: 10px;
+
+        background-color: #FFEE77;
+
+        padding: 10px;
+
+        overflow: scroll;
+
+        height: 174px;
+
+      }
+div.para1 {
+	float: right;
+	margin-top: 0px;
+	maring-right: 200px;
+}
+
+div.para2 {
+	float: right;
+	margin-top: 30px;
+margin-right: 500px;
+}
+
+div.para3 {
+	float: center;
+margin-right: 200px;
+}
+
+div.container {
+	height: 100%;
+	width: 100%;
+	border: 1px solid gray;
+}
+
+header {
+	padding: 1em;
+	color: White;
+	background-color: black;
+	text-align: center;
+margin-right: 0px;
+}
+
+footer {
+	padding: 1em;
+	color: White;
+	background-color: Black;
+	text-align: center;
+margin-top: 500px;
+
+}
+
+nav {
+	float: left;
+	max-width: 160px;
+	margin-top: 0px;
+	padding: 5px;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 10px;
+}
+
+nav ul a {
+	text-decoration: none;
+}
+
+article {
+	margin-left: 150px;
+	border-left: 1px solid Black;
+	padding: 20px;
+	overflow: hidden;
+}
+
+.sidenav1 {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 17px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.sidenav1 a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav1 a:hover {
+    color: #f1f1f1;
+}
+</style>
+<script language="javascript">
+                function divideNumbers()
+                {
+                        var a = 622;
+                        var b = parseInt(document.getElementById("value2").value);
+                        var ansD = document.getElementById("answer");
+                        ansD.value = 622/b;
+                }
+        </script>
+</head>
+
+
+<body>
+	
+
+
+
+<header>
+<div class="para2" align="right"> 
+
+				<form action="http://www.google.com/search" class="searchform"
+					method="get" name="searchform" target="_blank">
+					<input name="sitesearch" type="hidden" value=""> <input
+						autocomplete="on" class="form-controls search" name="q"
+						placeholder="Search" required="required"
+						type="text">
+					<button class="button" type="submit">Search</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+					href="about.html"> <input type="button" name="About"
+					value="About Us">
+				</a> &nbsp; 
+                    <a
+					href="contact.html"> <input type="button" name="Contact us"
+					value="Contact">
+				</form>
+
+
+				</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			</div>
+
+			<div class="para3">
+<img src="oil.png" height="100" width="100" align="middle" border="4">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				
+<font size="40" color="blue">Oil & Gas Sites</font>
+			</div>
+
+
+		</header>
+
+
+<div id="map"></div>
+
+    <div id="right-panel">
+
+    <div>
+<h2>Distance Calculator</h2>
+    <b>Start:</b>
+
+    <select id="start">
+<option value="mathura">Mathura</option>
+<option value="sagar">Bina</option>
+ <option value="Barauni">Barauni</option>
+
+
+    </select>
+
+    <b>Intersection:</b> <br>
+
+    <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
+
+    <select multiple id="waypoints">
+
+      <option value="mathura">Mathura</option>
+<option value="vidisa">Bina</option>
+ <option value="Barauni">Barauni</option>
+    </select>
+
+</select>
+
+    
+
+    <br>
+
+    <b>End:</b>
+
+    <select id="end">
+<option value="Barauni">Barauni</option>
+ <option value="mathura">Mathura</option>
+<option value="sagar">Bina</option>
+ 
+    </select>
+
+
+    <br>
+
+      <input type="submit" id="submit">
+
+    </div>
+
+
+    <div id="directions-panel"></div>
+
+    
+<li><a href="customer website.html"> <b>Back</b>
+					</a></li>
+</div>
+
+    <script>
+
+      function initMap() {
+
+        var directionsService = new google.maps.DirectionsService;
+
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+
+          zoom: 7,
+
+          center: {lat:23.847700, lng: 78.74330}
+
+        });
+
+        directionsDisplay.setMap(map);
+
+ 
+
+        document.getElementById('submit').addEventListener('click', function() {
+
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+
+        });
+
+      }
+
+ 
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+
+        var waypts = [];
+
+        var checkboxArray = document.getElementById('waypoints');
+
+        for (var i = 0; i < checkboxArray.length; i++) {
+
+          if (checkboxArray.options[i].selected) {
+
+            waypts.push({
+
+              location: checkboxArray[i].value,
+
+              stopover: true
+
+            });
+
+          }
+
+        }
+
+ 
+
+        directionsService.route({
+
+          origin: document.getElementById('start').value,
+
+          destination: document.getElementById('end').value,
+
+          waypoints: waypts,
+
+          optimizeWaypoints: true,
+
+          travelMode: 'DRIVING'
+
+        }, function(response, status) {
+
+          if (status === 'OK') {
+
+            directionsDisplay.setDirections(response);
+
+            var route = response.routes[0];
+
+            var summaryPanel = document.getElementById('directions-panel');
+
+            summaryPanel.innerHTML = '';
+
+            // For each route, display summary information.
+
+            for (var i = 0; i < route.legs.length; i++) {
+
+              var routeSegment = i + 1;
+
+              summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
+
+                  '</b><br>';
+
+              summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+
+              summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+
+              summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+
+            }
+
+          } else {
+
+            window.alert('Directions request failed due to ' + status);
+
+          }
+
+        });
+
+      }
+
+    </script>
+
+    <script async defer
+
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_GkBSpsFfNlGEUlwj9xWFBB7MFfA9Pzs&callback=initMap">
+
+    </script>
+
+<script> 
+        function cat() {
+
+var Y = document.getElementById("fak").value;
+var X  = (parseFloat(Y)/1000);    
+		document.getElementById("kaf").innerHTML = X+"robots";
+		return false;
+        }
+    </script>
+<h2>Robot Calculator</h2>
+ <input type="text" id="fak"  placeholder="Distance" />
+    <input type="button" value="Solve"  onclick=" cat()"><br>
+    <p id="kaf" >
+		
+<script> 
+      function calc() {
+
+var D = "0";
+var A = document.getElementById("robots").value;
+var B = document.getElementById("r").value;
+
+        D = (parseFloat(B)/(parseFloat(A)*0.1*24));    
+		document.getElementById("result").innerHTML = D+"days";
+		return false;
+        }
+    </script>
+<h2>Time Calculator</h2>
+  <input type="text" id="robots"  placeholder="no of robots" name="num1" />
+    <input type="button" value="Solve"  onclick=" calc()">
+	<input type="text" id="r" placeholder="Distance" name="r1"><br>
+    <p id="result" name="r1">
+
+
+		<footer align="center">
+
+			Copyright &copy; Oil & Gas Sites <br> Viresh Gupta &nbsp; 2019
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                               <a
+					href="about.html"> <input type="button" name="About"
+					value="About Us">
+				</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a
+					href="contact.html"> <input type="button" name="Contact us"
+					value="Contact">
+				</a>      
+
+		</footer>
+
+
+
+	</div>
+
+
+	<script>
+	function myFunction() {
+    	var x = document.getElementById("mySearch").placeholder;
+    	document.getElementById("demo").innerHTML = x;
+	}
+	</script>
+
+</div>
+</body>
+</html>
